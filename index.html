@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ดีกันค้าบบบ เค้าสนใจแค่เธอ 💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffccdd; /* สีชมพูอ่อนหวาน */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: #fff0f5; /* สีชมพูอ่อน */
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 320px;
+            border: 2px solid #ff99c8;
+        }
+        .question {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #d63384;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .yes {
+            background-color: #ff66b2;
+            color: white;
+            box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+        }
+        .yes:hover {
+            background-color: #ff3385;
+        }
+        .no {
+            background-color: #ff99c8;
+            color: white;
+            position: absolute;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="question">ดีกันนะค้าบบบบ 💖</div>
+        <div class="buttons">
+            <button class="yes" onclick="confirmYes()">คืนดีด้วยยยยย💖</button>
+            <button class="no" onmouseover="moveButton()">ปุ่มนี้วิ่งหนีได้ 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function confirmYes() {
+            alert("เย้! เค้ารักเธอนะ มีแค่เธอคนเดียววว 💖🥰");
+        }
+
+        function moveButton() {
+            const button = document.querySelector('.no');
+            const x = Math.random() * (window.innerWidth - 150);
+            const y = Math.random() * (window.innerHeight - 150);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
